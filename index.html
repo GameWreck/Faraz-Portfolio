@@ -39,6 +39,35 @@
 </head>
 
 <body class="template-color-1 spybody" data-spy="scroll" data-target=".navbar-example2" data-offset="70">
+  
+  <!-- Preloader -->
+   <div class="preloader">
+     <svg class="pl" viewBox="0 0 128 128" width="128px" height="128px">
+	<defs>
+		<linearGradient id="pl-grad" x1="0" y1="0" x2="1" y2="1">
+			<stop offset="0%" stop-color="#000" />
+			<stop offset="100%" stop-color="#fff" />
+		</linearGradient>
+		<mask id="pl-mask">
+			<rect x="0" y="0" width="128" height="128" fill="url(#pl-grad)" />
+		</mask>
+	</defs>
+	<g stroke-linecap="round" stroke-width="8" stroke-dasharray="32 32">
+		<g stroke="hsl(193,90%,50%)">
+			<line class="pl__line1" x1="4" y1="48" x2="4" y2="80" />
+			<line class="pl__line2" x1="19" y1="48" x2="19" y2="80" />
+			<line class="pl__line3" x1="34" y1="48" x2="34" y2="80" />
+			<line class="pl__line4" x1="49" y1="48" x2="49" y2="80" />
+			<line class="pl__line5" x1="64" y1="48" x2="64" y2="80" />
+			<g transform="rotate(180,79,64)">
+				<line class="pl__line6" x1="79" y1="48" x2="79" y2="80" />
+			</g>
+			<g transform="rotate(180,94,64)">
+				<line class="pl__line7" x1="94" y1="48" x2="94" y2="80" />
+			</g>
+			<g transform="rotate(180,109,64)">
+   </div>
+  <!-- End Preloader -->
 
     <!-- Start Header -->
     <header class="rn-header haeder-default black-logo-version header--fixed header--sticky">
@@ -1538,9 +1567,9 @@
                             <div class="social-area">
                                 <div class="name">FIND WITH ME</div>
                                 <div class="social-icone">
-                                    <a href="#"><i data-feather="facebook"></i></a>
-                                    <a href="#"><i data-feather="linkedin"></i></a>
-                                    <a href="#"><i data-feather="instagram"></i></a>
+                                    <a href="https://www.facebook.com/profile.php?id=100004389257830&mibextid=b06tZ0" target="_blank"><i data-feather="facebook"></i></a>
+                                    <a href="https://www.linkedin.com/in/faraz-khan-865a12246" target="_blank"><i data-feather="linkedin"></i></a>
+                                    <a href="https://instagram.com/farazkhan3340?utm_source=qr&igshid=YzU1NGVlODEzOA==" target="_blank"><i data-feather="instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -2110,6 +2139,12 @@
             }
         });
     });
+    
+    setTimeout(function() {
+        $(".preloader").fadeOut("slow", function() {
+            $(this).css("opacity", "0");
+        });
+    }, 2000);
     
     </script>
 
